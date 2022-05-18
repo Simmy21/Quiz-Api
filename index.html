@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" type="image/png" href="./Assets/mr-logo-icon.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coding Quiz</title>
+
+    <link rel="stylesheet" href="./CSS/index.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@1,600&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="scores"><a href="score.html" class="topbar">View Highscores</a></div>
+
+    <div class="timer topbar">Time: <span id="time">0</span></div>
+
+    <div class="wrapper">
+      <div id="start-screen" class="start">
+        <h1 style="color:orchid;">Coding Quiz Challenge</h1>
+        <p style="font-weight: bold;">
+            Answer the following question within the time limit.
+            Incorrect answers will penalize your score by ten seconds.
+        </p>
+        <button id="start">Start Quiz</button>
+      </div>
+
+      <div id="questions" class="hide">
+        <h2 id="question-title"></h2>
+        <div id="choices" class="choices"></div>
+      </div>
+
+      <div id="end-screen" class="hide">
+        <p>Your final score is <span id="final-score"></span>.</p>
+        <p>
+          Enter your initials: <input type="text" id="initials" max="3" />
+          <button id="submit">Submit</button>
+        </p>
+      </div>
+
+      <div id="feedback" class="feedback hide"></div>
+    </div>
+
+    <script src="./Javascript/questions.js"></script>
+    <script src="./Javascript/index.js"></script>
+  </body>
+</html>
